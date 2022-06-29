@@ -21,7 +21,7 @@ const Maintable = ({getRows, getEdit, setGridData, advRow,reLoad}) => {
 
     
     useEffect(async () => {       
-        const response =  await axios.get("ec2-44-201-90-156.compute-1.amazonaws.com:8080/backendvm/GetData");
+        const response =  await axios.get("http://ec2-44-201-90-156.compute-1.amazonaws.com:8080/backendvm/GetData");
         // const response =  await axios.get("http://localhost:8080/HRCBackend/GetData");
         setData(response.data);
       },[reLoad])
